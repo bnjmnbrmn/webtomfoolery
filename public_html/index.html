@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Demo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style>
+			a.test {
+				font-weight: bold;
+			}
+		</style>
 	</head>
 	<body>
-		<div>TODO write content</div>
+		<a href="http://jquery.com/">jQuery</a>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("a").click(function(event) {
+					if ($("a").hasClass("test"))
+						$("a").removeClass("test");
+					else
+						$("a").addClass("test");
+					event.preventDefault();
+				});
+			});
+		</script>
 	</body>
 </html>
